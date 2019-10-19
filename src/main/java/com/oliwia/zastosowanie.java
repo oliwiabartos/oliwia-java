@@ -10,7 +10,6 @@ abstract class ComplicatedAlgorithm {
     private void fourthMethodToExecute(){
         System.out.println("This is fourth method to execute");
     }
-
     public void run(){
         this.firstMethodToExecute();
         this.secondMethodToExecute();
@@ -24,6 +23,12 @@ class ComplicatedAlgorithmRunner extends ComplicatedAlgorithm{
     }
     protected void secondMethodToExecute(){
         System.out.println("This is second method to execute");
+    }
+    //adnotacja pozwala nam zmienic nadpisywana metoda
+    @Override
+    public void run(){
+        this.firstMethodToExecute();
+        this.secondMethodToExecute();
     }
 }
 
